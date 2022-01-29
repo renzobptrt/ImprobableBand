@@ -4,6 +4,8 @@ using UnityEngine;
 using DG.Tweening;
 public class GameController : MonoBehaviour
 {
+    public int startCheckPointValue = 0;
+
     public static GameController Instance
     {
         get
@@ -28,11 +30,27 @@ public class GameController : MonoBehaviour
 
 
     //Public Methods
-    public void NextCurrentCheckPoint()
-    {
-        currentCheckPointValue++;
-    }
 
+    public void SetCurrentCurrentBlock(int checkPoint)
+    {
+        currentCheckPointValue = checkPoint;
+
+        currentCheckBlock = GameObject.Find("/World/CheckBlock_" + currentCheckPointValue).transform;
+
+        Transform transfromResources = currentCheckBlock.Find("Resources");
+
+        foreach (Transform child in transfromResources)
+        {
+            currentListResources.Add(child.GetComponent<Resource>());
+        }
+
+        currentStartPositionMurdok = currentCheckBlock.Find("StartPositionMurdok").transform.position;
+        currentStartPositionHerpo = currentCheckBlock.Find("StartPositionHerpo").transform.position;
+
+        currentCheckPointTransform = currentCheckBlock.Find("CheckPoint").transform;
+
+        PlayerController.Instance.SetStartPositions(currentStartPositionMurdok, currentStartPositionHerpo);
+    }
 
     //Private Methods
     private void Awake()
@@ -49,7 +67,7 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        SetCurrentCurrentBlock();
+        SetCurrentCurrentBlock(startCheckPointValue);
     }
 
     private void Update()
@@ -70,25 +88,6 @@ public class GameController : MonoBehaviour
                 });
             });
         }
-    }
-
-    void SetCurrentCurrentBlock()
-    {
-        currentCheckBlock = GameObject.Find("/World/CheckBlock_" + currentCheckPointValue).transform;
-        
-        Transform transfromResources = currentCheckBlock.Find("Resources");
-
-        foreach (Transform child in transfromResources)
-        {
-            currentListResources.Add(child.GetComponent<Resource>());
-        }
-
-        currentStartPositionMurdok = currentCheckBlock.Find("StartPositionMurdok").transform.position;
-        currentStartPositionHerpo = currentCheckBlock.Find("StartPositionHerpo").transform.position;
-
-        currentCheckPointTransform = currentCheckBlock.Find("CheckPoint").transform;
-
-        PlayerController.Instance.SetStartPositions(currentStartPositionMurdok, currentStartPositionHerpo);
     }
 
     void ResetCurrentBlock()
