@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 728024069235097739}
   - component: {fileID: 4519477875118972513}
   - component: {fileID: 3783259991483602605}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Rocks2G1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4268128955840439386}
   - component: {fileID: 5499346287234895678}
   - component: {fileID: 6077230353086423950}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Tile_Grass.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 6530779491926484234}
   - component: {fileID: 1962411938017633533}
   - component: {fileID: 2920147960491859017}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Rocks1G1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8865120588308655103}
   - component: {fileID: 2674160123105290065}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: TerrainBase1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
