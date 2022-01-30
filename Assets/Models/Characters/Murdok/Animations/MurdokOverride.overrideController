@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MurdokOverride
+  m_Controller: {fileID: 9100000, guid: b5d087c37828f7544b39434817c4c61f, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -4592379889326835182, guid: 907b63d63974dc049a05e2b54d8527aa, type: 3}
+    m_OverrideClip: {fileID: 8028026818619922726, guid: b9376a7406270fe42a1a6e6f6b5600e0, type: 3}
+  - m_OriginalClip: {fileID: 1596398237429129366, guid: 0be2a66cca249b747a00a8e494509d13, type: 3}
+    m_OverrideClip: {fileID: 704428821447979790, guid: d21a6699bd3dfc646bbb1bad9cdbe083, type: 3}
+  - m_OriginalClip: {fileID: -6086858111010312472, guid: 257367164e3165e47aaa4a0ee00b088b, type: 3}
+    m_OverrideClip: {fileID: 1843085928057304708, guid: f324b14ebd004ec4782e81ed37ec35d6, type: 3}

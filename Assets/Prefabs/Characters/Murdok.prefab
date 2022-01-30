@@ -28,8 +28,8 @@ Transform:
   m_LocalPosition: {x: 46, y: 21.9119, z: -88.59259}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5811586864608618707}
   - {fileID: 6281498982287328259}
+  - {fileID: 7589629944964341728}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -79,67 +79,67 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6281498982057341058}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &6281498982299455288
+--- !u!1001 &3710048482363887617
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 6281498982057341058}
     m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: a376501b5690c7242a273940a75b74bd, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
+    - target: {fileID: 5864995020229236059, guid: 997b51f2eb5cad5489fd0bb52a16ce5b, type: 3}
+      propertyPath: m_Name
+      value: MurdokAnimated Variant
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a376501b5690c7242a273940a75b74bd, type: 3}
+    - target: {fileID: 6498541743921860577, guid: 997b51f2eb5cad5489fd0bb52a16ce5b, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498541743921860577, guid: 997b51f2eb5cad5489fd0bb52a16ce5b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a376501b5690c7242a273940a75b74bd, type: 3}
+    - target: {fileID: 6498541743921860577, guid: 997b51f2eb5cad5489fd0bb52a16ce5b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a376501b5690c7242a273940a75b74bd, type: 3}
+    - target: {fileID: 6498541743921860577, guid: 997b51f2eb5cad5489fd0bb52a16ce5b, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a376501b5690c7242a273940a75b74bd, type: 3}
+    - target: {fileID: 6498541743921860577, guid: 997b51f2eb5cad5489fd0bb52a16ce5b, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a376501b5690c7242a273940a75b74bd, type: 3}
+    - target: {fileID: 6498541743921860577, guid: 997b51f2eb5cad5489fd0bb52a16ce5b, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a376501b5690c7242a273940a75b74bd, type: 3}
+    - target: {fileID: 6498541743921860577, guid: 997b51f2eb5cad5489fd0bb52a16ce5b, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a376501b5690c7242a273940a75b74bd, type: 3}
+    - target: {fileID: 6498541743921860577, guid: 997b51f2eb5cad5489fd0bb52a16ce5b, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a376501b5690c7242a273940a75b74bd, type: 3}
+    - target: {fileID: 6498541743921860577, guid: 997b51f2eb5cad5489fd0bb52a16ce5b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a376501b5690c7242a273940a75b74bd, type: 3}
+    - target: {fileID: 6498541743921860577, guid: 997b51f2eb5cad5489fd0bb52a16ce5b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a376501b5690c7242a273940a75b74bd, type: 3}
+    - target: {fileID: 6498541743921860577, guid: 997b51f2eb5cad5489fd0bb52a16ce5b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: a376501b5690c7242a273940a75b74bd, type: 3}
-      propertyPath: m_Name
-      value: MurdokRigged
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a376501b5690c7242a273940a75b74bd, type: 3}
---- !u!4 &5811586864608618707 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 997b51f2eb5cad5489fd0bb52a16ce5b, type: 3}
+--- !u!4 &7589629944964341728 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a376501b5690c7242a273940a75b74bd, type: 3}
-  m_PrefabInstance: {fileID: 6281498982299455288}
+  m_CorrespondingSourceObject: {fileID: 6498541743921860577, guid: 997b51f2eb5cad5489fd0bb52a16ce5b, type: 3}
+  m_PrefabInstance: {fileID: 3710048482363887617}
   m_PrefabAsset: {fileID: 0}

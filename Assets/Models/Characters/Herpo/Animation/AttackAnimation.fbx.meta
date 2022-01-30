@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: f324b14ebd004ec4782e81ed37ec35d6
+guid: 907b63d63974dc049a05e2b54d8527aa
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: 1843085928057304708
-    second: MurdokWalk
+      74: -4592379889326835182
+    second: HerpoAttack
   - first:
-      74: -7620193214067808319
-    second: DestructorRig|Baseposes_L_DestructorRigged.blend
+      74: 5098345825899164718
+    second: ConstructorRig|BasePoses_L_DestructorRigged.blend
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -38,18 +38,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: MurdokWalk
-      takeName: DestructorRig|Walk
+      name: HerpoAttack
+      takeName: ConstructorRig|ConstructorRigAction
       internalID: 0
-      firstFrame: 0
-      lastFrame: 50
+      firstFrame: 1
+      lastFrame: 25
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -121,11 +121,11 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: DestructorRig
+    rootMotionBoneName: Root
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: a376501b5690c7242a273940a75b74bd, type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: d424993ec33082143901427279d7c42a, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
