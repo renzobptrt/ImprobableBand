@@ -82,12 +82,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //ChangePlayer
-        if (Input.GetKeyDown(KeyCode.C) && controller!=null)
-        {
-            ChangePlayer();
-        }
-
         //Velocity X
         float hInput = Input.GetAxis("Horizontal");
         direction.x = hInput * speed;
@@ -97,6 +91,12 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded)
         {
+            //ChangePlayer
+            if (Input.GetKeyDown(KeyCode.C) && controller != null)
+            {
+                ChangePlayer();
+            }
+
             //direction.y = 0f;
 
             ableToMakeADoubleJump = true;
@@ -160,11 +160,13 @@ public class PlayerController : MonoBehaviour
     private CharacterController m_Murdok;
     private CharacterController m_Herpo;
 
-    private CharacterController controller;
+    public CharacterController controller;
     private CharacterController lastController;
     private Transform groundCheck;
     private Vector3 startPositionMurdok;
     private Vector3 startPositionHerpo;
+
+    public float lastUp;
 
     private enum Characters
     {
