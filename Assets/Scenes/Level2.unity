@@ -2960,13 +2960,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1211202445}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a67991a73d867b4585ee49c7de80cea, type: 3}
+  m_Script: {fileID: 11500000, guid: dc3ee8b8667e9b94fb1fea9e9bf6cd91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offSetYTop: 5
-  offSetYBot: 5
-  velocityTop: 3
-  velocityBot: 10
+  timeToTop: 2
+  timeToBot: 2
+  offSetTop: {x: 0, y: 5, z: 0}
+  offSetBot: {x: 0, y: 5, z: 0}
 --- !u!1001 &1229795949
 PrefabInstance:
   m_ObjectHideFlags: 0

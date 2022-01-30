@@ -69,7 +69,6 @@ public class GameController : MonoBehaviour
     public void IsAllResourcesCheck()
     {
         currentResourcesToCheck--;
-        Debug.LogError(currentResourcesToCheck);
         readyToRestart = currentResourcesToCheck <= 0 ? false : true;
     }
 
