@@ -44,7 +44,7 @@ public class GUIController : MonoBehaviour
     public void ChangeGuiSpriteCharacter()
     {
         currentCharacterImage.sprite =
-            currentCharacterImage.sprite.name.Equals("Murdok") ? s_Herpo : s_Murdok;
+            currentCharacterImage.sprite.name.Contains("Murdok") ? s_Herpo : s_Murdok;
     }
 
     public void AddResource(string name, int value)
