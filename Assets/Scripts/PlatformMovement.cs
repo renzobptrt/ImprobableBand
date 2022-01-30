@@ -11,15 +11,34 @@ public class PlatformMovement : MonoBehaviour
     public Vector3 offSetTop = Vector3.zero;
     public Vector3 offSetBot = Vector3.zero;
 
+    public bool isAbleToMovement;
+
+    public bool AbleToMovement
+    {
+        get { return ableToMovement; }
+        set
+        {
+            ableToMovement = value;
+            if (ableToMovement)
+            {
+                Movement();
+            }
+        }
+    }
+    public void SetAbleToMovement()
+    {
+        AbleToMovement = true;
+    }
+
     private void Start()
     {
         startPosition = this.transform.position;
         topPosition = startPosition + offSetTop;
         botPosition = startPosition - offSetBot;
 
-        if (ableToMovement)
+        if (isAbleToMovement)
         {
-            Movement();
+            SetAbleToMovement();
         }
     }
 
@@ -34,8 +53,8 @@ public class PlatformMovement : MonoBehaviour
         });
     }
 
-    private bool ableToMovement = true;
     private Vector3 startPosition;
     private Vector3 topPosition;
     private Vector3 botPosition;
+    private bool ableToMovement;
 }

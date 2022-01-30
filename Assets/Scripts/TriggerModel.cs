@@ -5,6 +5,7 @@ using UnityEngine;
 public class TriggerModel : MonoBehaviour
 {
     public GameObject model;
+    public PlatformMovement platform;
 
     public enum TypeOfTrigger
     {
@@ -61,6 +62,11 @@ public class TriggerModel : MonoBehaviour
                 model.SetActive(false);
                 this.gameObject.SetActive(false);
                 GameController.Instance.IsAllResourcesCheck();
+
+                if(platform != null)
+                {
+                    platform.SetAbleToMovement();
+                }
             }
         }
     }
