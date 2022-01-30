@@ -85,12 +85,6 @@ public class PlayerController : MonoBehaviour
         //Velocity X
         float hInput = Input.GetAxis("Horizontal");
         
-        if(hInput != 0)
-        {
-            Quaternion newRotation = Quaternion.LookRotation(new Vector3(0,0, hInput));
-            controller.transform.rotation = newRotation;
-        }
-
         direction.x = hInput * speed;
 
         //Check is Grounded
@@ -128,6 +122,12 @@ public class PlayerController : MonoBehaviour
         if(controller != null)
         {
             controller.Move(direction * Time.deltaTime);
+
+            if (hInput != 0)
+            {
+                Quaternion newRotation = Quaternion.LookRotation(new Vector3(0, 0, hInput));
+                controller.transform.rotation = newRotation;
+            }
         }
     }
 

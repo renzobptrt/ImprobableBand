@@ -59,6 +59,19 @@ public class GameController : MonoBehaviour
         PlayerController.Instance.SetStartPositions(currentStartPositionMurdok, currentStartPositionHerpo);
     }
 
+    public void SetCurrentResourcesToCheck(int value)
+    {
+        numberResourcesToCheck = value;
+        currentResourcesToCheck = numberResourcesToCheck;
+        readyToRestart = true;
+    }
+
+    public void IsAllResourcesCheck()
+    {
+        currentResourcesToCheck--;
+        readyToRestart = currentResourcesToCheck <= 0 ? false : true;
+    }
+
     //Private Methods
     private void Awake()
     {
@@ -75,6 +88,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         SetCurrentCurrentBlock(startCheckPointValue);
+        SetCurrentResourcesToCheck(numberResourcesToCheck);
     }
 
     private void Update()
@@ -112,6 +126,13 @@ public class GameController : MonoBehaviour
         PlayerController.Instance.ResetPositions();
 
         GUIController.Instance.ResetResource();
+
+        ResetCurrentResourcesToCheck();
+    }
+
+    void ResetCurrentResourcesToCheck()
+    {
+        currentResourcesToCheck = numberResourcesToCheck;
     }
 
     private static GameController instance = null;
@@ -125,5 +146,7 @@ public class GameController : MonoBehaviour
 
     //Features
     private int currentCheckPointValue = 0;
+    private int currentResourcesToCheck = 0;
+    private int numberResourcesToCheck = 3;
     private bool readyToRestart = true;
 }
