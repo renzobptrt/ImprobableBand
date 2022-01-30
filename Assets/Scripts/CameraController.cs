@@ -10,7 +10,6 @@ public class CameraController : MonoBehaviour
         {
             if (instance == null)
             {
-
                 instance = FindObjectOfType<CameraController>();
 
                 if (instance == null)
@@ -32,7 +31,9 @@ public class CameraController : MonoBehaviour
     public void SetTarget(Transform newTarget)
     {
         target = newTarget;
-        offset = transform.position - target.position;
+        offset = transform.position - newTarget.position;
+        offset.y = newTarget.gameObject.name.Equals("Murdok") ?
+            offsetYMurdok : offSetYHerpo;
     }
 
 
@@ -52,7 +53,9 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        
+        startPosition = transform.position;
+        offsetYMurdok = transform.position.y - GameObject.Find("/World/Murdok").transform.position.y;
+        offSetYHerpo = transform.position.y - GameObject.Find("/World/Herpo").transform.position.y;
     }
 
     // Update is called once per frame
@@ -60,7 +63,7 @@ public class CameraController : MonoBehaviour
     {
         //Target Position
         Vector3 desiredPosition = new Vector3(  target.position.x ,
-                                                transform.position.y,
+                                                target.position.y + offset.y,
                                                 target.position.z + offset.z);
 
         //Update Position of Camera
@@ -71,6 +74,9 @@ public class CameraController : MonoBehaviour
 
     private static CameraController instance = null;
 
+    private Vector3 startPosition;
     private Transform target;
     private Vector3 offset;
+    private float offsetYMurdok;
+    private float offSetYHerpo;
 }
