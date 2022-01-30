@@ -63,23 +63,34 @@ public class GUIController : MonoBehaviour
         }
     }
 
-    public void ConsumeResource(string name)
+    public bool ConsumeResource(string name)
     {
         switch (name)
         {
             case "Murdok":
                 {
-                    m_currentMurdokResources--;
-                    currentResourcesMurdokText.text = "x" + m_currentMurdokResources.ToString();
+                    if(m_currentMurdokResources > 0)
+                    {
+                        m_currentMurdokResources--;
+                        currentResourcesMurdokText.text = "x" + m_currentMurdokResources.ToString();
+                        return true;
+                    }
+
                     break;
                 }
             case "Herpo":
                 {
-                    m_currentHerpoResources--;
-                    currentResourcesHerpoText.text = "x" + m_currentHerpoResources.ToString();
+                    if(m_currentHerpoResources > 0)
+                    {
+                        m_currentHerpoResources--;
+                        currentResourcesHerpoText.text = "x" + m_currentHerpoResources.ToString();
+                        return true;
+                    }
                     break;
                 }
         }
+
+        return false;
     }
 
     public void ResetResource()

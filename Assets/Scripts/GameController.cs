@@ -44,6 +44,13 @@ public class GameController : MonoBehaviour
             currentListResources.Add(child.GetComponent<Resource>());
         }
 
+        Transform transfromTriggers = currentCheckBlock.Find("Triggers");
+
+        foreach(Transform child in transfromTriggers)
+        {
+            currentListTriggerModel.Add(child.GetComponent<TriggerModel>());
+        }
+
         currentStartPositionMurdok = currentCheckBlock.Find("StartPositionMurdok").transform.position;
         currentStartPositionHerpo = currentCheckBlock.Find("StartPositionHerpo").transform.position;
 
@@ -97,6 +104,11 @@ public class GameController : MonoBehaviour
             r.ResetResource();
         }
 
+        foreach(TriggerModel t in currentListTriggerModel)
+        {
+            t.ResetModel();
+        }
+
         PlayerController.Instance.ResetPositions();
 
         GUIController.Instance.ResetResource();
@@ -106,6 +118,7 @@ public class GameController : MonoBehaviour
     //Complements
     private Transform currentCheckBlock;
     private List<Resource> currentListResources = new List<Resource>();
+    private List<TriggerModel> currentListTriggerModel = new List<TriggerModel>();
     private Vector3 currentStartPositionMurdok;
     private Vector3 currentStartPositionHerpo;
     private Transform currentCheckPointTransform;
