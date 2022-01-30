@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("Settings Player")]
     public float speed = 8;
-    public float jumpForce = 10;
     public float jumpForceMurdok = 5;
     public float jumpForceHerpo = 10;
     public float gravity = -20;
@@ -200,6 +199,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 startPositionHerpo;
 
     public float lastUp;
+    private float jumpForce = 10;
 
     private enum Characters
     {

@@ -5512,8 +5512,8 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691750011}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
+  m_Alpha: 0
+  m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!114 &691750014
@@ -14738,7 +14738,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   speed: 8
-  jumpForce: 10
+  jumpForceMurdok: 5
+  jumpForceHerpo: 10
   gravity: -20
   lastUp: 0
 --- !u!4 &1822598246
