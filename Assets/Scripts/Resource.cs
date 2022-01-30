@@ -10,6 +10,7 @@ public class Resource : MonoBehaviour
     private void Start()
     {
         currentValue = value;
+        readyToGet = true;
     }
     
     //Public Methods
@@ -20,16 +21,22 @@ public class Resource : MonoBehaviour
         gameObject.SetActive(true);
     }
 
+    public void ResetToGet()
+    {
+        readyToGet = true;
+    }
+
     //Private Methods
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Equals("Player"))
+        if (other.gameObject.tag.Equals("Player") && readyToGet)
         {
             GUIController.Instance.AddResource(
                 other.gameObject.name,
                 currentValue
                 );
+            readyToGet = false;
             currentValue = 0;
             SoundController.Instance.PlaySfxMusic("Resource_2");
             gameObject.SetActive(false);
@@ -37,4 +44,5 @@ public class Resource : MonoBehaviour
     }
 
     private int currentValue = 0;
+    private bool readyToGet = false;
 }
