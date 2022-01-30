@@ -36,14 +36,14 @@ public class GameController : MonoBehaviour
         currentCheckBlock = GameObject.Find("/World/CheckBlock_" + currentCheckPointValue).transform;
 
         Transform transfromResources = currentCheckBlock.Find("Resources");
-
+        currentListResources.Clear();
         foreach (Transform child in transfromResources)
         {
             currentListResources.Add(child.GetComponent<Resource>());
         }
 
         Transform transfromTriggers = currentCheckBlock.Find("Triggers");
-
+        currentListTriggerModel.Clear();
         foreach(Transform child in transfromTriggers)
         {
             currentListTriggerModel.Add(child.GetComponent<TriggerModel>());
@@ -96,6 +96,9 @@ public class GameController : MonoBehaviour
             readyToRestart = false;
             CanvasGroup transitionPanel = GUIController.Instance.transitionPanel;
             transitionPanel.interactable = true;
+
+            SoundController.Instance.PlaySfxMusic("Reset");
+
             transitionPanel.DOFade(1, 1).OnComplete(() =>
             {
                 ResetCurrentBlock();

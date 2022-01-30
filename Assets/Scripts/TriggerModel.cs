@@ -49,6 +49,7 @@ public class TriggerModel : MonoBehaviour
                 model.SetActive(true);
                 this.gameObject.SetActive(false);
                 GameController.Instance.IsAllResourcesCheck();
+                SoundController.Instance.PlaySfxMusic("Trigger");
             }
         }
 
@@ -62,8 +63,9 @@ public class TriggerModel : MonoBehaviour
                 model.SetActive(false);
                 this.gameObject.SetActive(false);
                 GameController.Instance.IsAllResourcesCheck();
+                SoundController.Instance.PlaySfxMusic("Trigger");
 
-                if(platform != null)
+                if (platform != null)
                 {
                     platform.SetAbleToMovement();
                 }

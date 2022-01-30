@@ -156,6 +156,8 @@ public class PlayerController : MonoBehaviour
         //Controllers
         CameraController.Instance.SetTarget(controller.transform.gameObject.transform);
         GUIController.Instance.ChangeGuiSpriteCharacter();
+        //Audio
+        SoundController.Instance.PlaySfxMusic("Change");
     }
 
     private static PlayerController instance = null;

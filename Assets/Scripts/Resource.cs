@@ -31,6 +31,7 @@ public class Resource : MonoBehaviour
                 currentValue
                 );
             currentValue = 0;
+            SoundController.Instance.PlaySfxMusic("Resource_2");
             gameObject.SetActive(false);
         }
     }
