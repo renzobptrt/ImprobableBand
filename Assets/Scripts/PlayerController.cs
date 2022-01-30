@@ -84,6 +84,13 @@ public class PlayerController : MonoBehaviour
     {
         //Velocity X
         float hInput = Input.GetAxis("Horizontal");
+        
+        if(hInput != 0)
+        {
+            Quaternion newRotation = Quaternion.LookRotation(new Vector3(0,0, hInput));
+            controller.transform.rotation = newRotation;
+        }
+
         direction.x = hInput * speed;
 
         //Check is Grounded
@@ -102,7 +109,7 @@ public class PlayerController : MonoBehaviour
             ableToMakeADoubleJump = true;
 
             //Jump
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButtonDown("Jump") && controller.gameObject.name.Equals("Herpo"))
             {
                 direction.y = jumpForce;
             }
@@ -112,7 +119,7 @@ public class PlayerController : MonoBehaviour
             //Gravity
             direction.y += gravity * Time.deltaTime;
 
-            if (ableToMakeADoubleJump & Input.GetButtonDown("Jump"))
+            if (ableToMakeADoubleJump & Input.GetButtonDown("Jump") && controller.gameObject.name.Equals("Herpo"))
             {
                 direction.y = jumpForce;
                 ableToMakeADoubleJump = false;
