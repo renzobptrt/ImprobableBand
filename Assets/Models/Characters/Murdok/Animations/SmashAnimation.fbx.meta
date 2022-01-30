@@ -1,19 +1,15 @@
 fileFormatVersion: 2
-guid: a376501b5690c7242a273940a75b74bd
+guid: b9376a7406270fe42a1a6e6f6b5600e0
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable: []
-  externalObjects:
+  internalIDToNameTable:
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: DestructorBody
-    second: {fileID: 2100000, guid: 00b89f135ee9e2142a3fe45af5076328, type: 2}
+      74: 8028026818619922726
+    second: DestructorRig|Smash
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: DestructorScepter
-    second: {fileID: 2100000, guid: c76775478014da24a9787449c56a0a00, type: 2}
+      74: -7620193214067808319
+    second: DestructorRig|Baseposes_L_DestructorRigged.blend
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -100,11 +96,11 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: a376501b5690c7242a273940a75b74bd, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
