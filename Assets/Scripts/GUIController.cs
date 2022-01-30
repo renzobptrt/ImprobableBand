@@ -9,6 +9,7 @@ public class GUIController : MonoBehaviour
 
     [Header("Complements")]
     public CanvasGroup transitionPanel;
+    public CanvasGroup finishPanel;
     public Image currentCharacterImage;
     public TextMeshProUGUI currentResourcesMurdokText;
     public TextMeshProUGUI currentResourcesHerpoText;

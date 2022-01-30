@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using DG.Tweening;
+using UnityEngine.UI;
+
 public class GameController : MonoBehaviour
 {
     public int startCheckPointValue = 0;
@@ -74,7 +77,21 @@ public class GameController : MonoBehaviour
     public void FinishGame()
     {
         readyToRestart = false;
+        CanvasGroup finishPanel = GUIController.Instance.transitionPanel;
+        finishPanel.interactable = true;
+        Button nextButton = finishPanel.transform.Find("Next").GetComponent<Button>();
+        nextButton.interactable = false;
 
+        finishPanel.DOFade(1, 2).OnComplete(() =>
+        {
+            nextButton.interactable = true;
+        });
+
+    }
+
+    public void NextScene()
+    {
+        SceneManager.LoadScene(nextScene);
     }
 
     //Private Methods
@@ -167,5 +184,5 @@ public class GameController : MonoBehaviour
     private int currentResourcesToCheck = 0;
     private int numberResourcesToCheck = 3;
     private bool readyToRestart = true;
-    public int numberStages = 0;
+    private int numberStages = 0;
 }
