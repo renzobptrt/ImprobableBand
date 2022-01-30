@@ -104,8 +104,6 @@ public class PlayerController : MonoBehaviour
                 ChangePlayer();
             }
 
-            //direction.y = 0f;
-
             ableToMakeADoubleJump = true;
 
             //Jump
