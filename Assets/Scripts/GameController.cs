@@ -28,9 +28,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-
     //Public Methods
-
     public void SetCurrentCurrentBlock(int checkPoint)
     {
         currentCheckPointValue = checkPoint;

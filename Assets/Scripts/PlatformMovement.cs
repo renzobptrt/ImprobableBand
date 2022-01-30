@@ -25,6 +25,7 @@ public class PlatformMovement : MonoBehaviour
             }
         }
     }
+
     public void SetAbleToMovement()
     {
         AbleToMovement = true;
