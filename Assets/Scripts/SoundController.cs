@@ -31,7 +31,7 @@ public class SoundController : MonoBehaviour
     //Public Methods
     public void PlayBackgroundMusic(string nameMusic)
     {
-        AudioClip currentBackground = Resources.Load<AudioClip>(nameMusic);
+        AudioClip currentBackground = Resources.Load<AudioClip>("Audio/"+nameMusic);
         if (currentBackground != null)
         {
             backgroundMusicASource.clip = currentBackground;
@@ -41,7 +41,7 @@ public class SoundController : MonoBehaviour
 
     public  void PlaySfxMusic(string nameSfx)
     {
-        AudioClip currentSfxMusic = Resources.Load<AudioClip>(nameSfx);
+        AudioClip currentSfxMusic = Resources.Load<AudioClip>("Audio/" + nameSfx);
         if (currentSfxMusic != null)
             sfxMusicASource.PlayOneShot(currentSfxMusic);
     }
