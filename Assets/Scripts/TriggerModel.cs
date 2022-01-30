@@ -47,9 +47,8 @@ public class TriggerModel : MonoBehaviour
             {
                 model.SetActive(true);
                 this.gameObject.SetActive(false);
+                GameController.Instance.IsAllResourcesCheck();
             }
-
-            GameController.Instance.IsAllResourcesCheck();
         }
 
         if(characterToTrigger.Equals(TypeOfTrigger.Destroy) &&
@@ -61,9 +60,8 @@ public class TriggerModel : MonoBehaviour
             {
                 model.SetActive(false);
                 this.gameObject.SetActive(false);
+                GameController.Instance.IsAllResourcesCheck();
             }
-
-            GameController.Instance.IsAllResourcesCheck();
         }
     }
 }
