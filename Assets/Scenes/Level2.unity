@@ -488,9 +488,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionPanel: {fileID: 2062004007}
+  finishPanel: {fileID: 0}
   currentCharacterImage: {fileID: 2096795256}
   currentResourcesMurdokText: {fileID: 1865845606}
   currentResourcesHerpoText: {fileID: 1604849781}
+  nextButton: {fileID: 0}
   s_Murdok: {fileID: 21300000, guid: ed49782dfa5a0b048b71202b741684b9, type: 3}
   s_Herpo: {fileID: 21300000, guid: beaba43ec2de6524e9d0faeb3a6c1461, type: 3}
 --- !u!1 &267531383
@@ -1004,6 +1006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startCheckPointValue: 0
+  nextScene: MainMenu
 --- !u!1001 &420021898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1171,6 +1174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberCheckPoint: 0
   resourcesToCheck: 0
+  isLastCheckPoint: 0
 --- !u!1001 &496569181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5040,10 +5044,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   speed: 8
-  jumpForce: 10
+  jumpForceMurdok: 5
+  jumpForceHerpo: 10
   gravity: -20
-  controller: {fileID: 0}
-  lastUp: 0
+  nameThemeMurdok: 
+  nameThemeHerpo: 
 --- !u!4 &1822598246
 Transform:
   m_ObjectHideFlags: 0
