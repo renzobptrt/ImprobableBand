@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
 {
     public int startCheckPointValue = 0;
 
+    public string nextScene = "Level2";
     public static GameController Instance
     {
         get
@@ -68,6 +69,12 @@ public class GameController : MonoBehaviour
     {
         currentResourcesToCheck--;
         readyToRestart = currentResourcesToCheck <= 0 ? false : true;
+    }
+
+    public void FinishGame()
+    {
+        readyToRestart = false;
+
     }
 
     //Private Methods

@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     [Header("Settings Player")]
     public float speed = 8;
     public float jumpForce = 10;
+    public float jumpForceMurdok = 5;
+    public float jumpForceHerpo = 10;
     public float gravity = -20;
 
     public static PlayerController Instance
@@ -58,8 +60,13 @@ public class PlayerController : MonoBehaviour
         controller = lastController;
     }
 
-    //Private Methods
+    public void FinishController()
+    {
+        direction = Vector3.zero;
+        controller = null;
+    }
 
+    //Private Methods
     private void Awake()
     {
         currentCharacter = Characters.Murdok;
@@ -77,6 +84,7 @@ public class PlayerController : MonoBehaviour
         //ResetPositions();
         m_Murdok.transform.position = startPositionMurdok;
         m_Herpo.transform.position = startPositionHerpo;
+        jumpForce = jumpForceHerpo;
 
         direction = Vector3.zero;
         CameraController.Instance.SetTarget(controller.transform.gameObject.transform);
@@ -104,7 +112,7 @@ public class PlayerController : MonoBehaviour
             ableToMakeADoubleJump = true;
 
             //Jump
-            if (Input.GetButtonDown("Jump") && controller.gameObject.name.Equals("Herpo"))
+            if (Input.GetButtonDown("Jump"))
             {
                 direction.y = jumpForce;
                 SoundController.Instance.PlaySfxMusic("Jump");
@@ -151,6 +159,7 @@ public class PlayerController : MonoBehaviour
                     currentCharacter = Characters.Herpo;
                     controller = m_Herpo;
                     animator = an_Herpo;
+                    jumpForce = jumpForceHerpo;
                     break;
                 }
             case Characters.Herpo:
@@ -158,6 +167,7 @@ public class PlayerController : MonoBehaviour
                     currentCharacter = Characters.Murdok;
                     controller = m_Murdok;
                     animator = an_Murdok;
+                    jumpForce = jumpForceMurdok;
                     break;
                 }
         }
