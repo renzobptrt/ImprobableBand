@@ -104,6 +104,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Jump") && controller.gameObject.name.Equals("Herpo"))
             {
                 direction.y = jumpForce;
+                SoundController.Instance.PlaySfxMusic("Jump");
             }
         }
         else
@@ -115,6 +116,7 @@ public class PlayerController : MonoBehaviour
             {
                 direction.y = jumpForce;
                 ableToMakeADoubleJump = false;
+                SoundController.Instance.PlaySfxMusic("Jump");
             }
         }
 
