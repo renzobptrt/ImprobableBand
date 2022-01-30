@@ -52,13 +52,13 @@ public class GUIController : MonoBehaviour
     {
         switch(name){
             case "Murdok":  {
-                m_currentMurdokResources += value;
-                currentResourcesMurdokText.text = "x" + m_currentMurdokResources.ToString();
+                currentMurdokResources += value;
+                currentResourcesMurdokText.text = "x" + currentMurdokResources.ToString();
                 break;
             }
             case "Herpo": {
-                m_currentHerpoResources += value;
-                currentResourcesHerpoText.text = "x" +  m_currentHerpoResources.ToString();
+                currentHerpoResources += value;
+                currentResourcesHerpoText.text = "x" +  currentHerpoResources.ToString();
                 break;
             }
         }
@@ -70,10 +70,10 @@ public class GUIController : MonoBehaviour
         {
             case "Murdok":
                 {
-                    if(m_currentMurdokResources > 0)
+                    if(currentMurdokResources > 0)
                     {
-                        m_currentMurdokResources--;
-                        currentResourcesMurdokText.text = "x" + m_currentMurdokResources.ToString();
+                        currentMurdokResources--;
+                        currentResourcesMurdokText.text = "x" + currentMurdokResources.ToString();
                         return true;
                     }
 
@@ -81,10 +81,10 @@ public class GUIController : MonoBehaviour
                 }
             case "Herpo":
                 {
-                    if(m_currentHerpoResources > 0)
+                    if(currentHerpoResources > 0)
                     {
-                        m_currentHerpoResources--;
-                        currentResourcesHerpoText.text = "x" + m_currentHerpoResources.ToString();
+                        currentHerpoResources--;
+                        currentResourcesHerpoText.text = "x" + currentHerpoResources.ToString();
                         return true;
                     }
                     break;
@@ -96,11 +96,11 @@ public class GUIController : MonoBehaviour
 
     public void ResetResource()
     {
-        m_currentMurdokResources = 0;
-        m_currentHerpoResources = 0;
+        currentHerpoResources = 0;
+        currentMurdokResources = 0;
 
-        currentResourcesMurdokText.text = "x" + m_currentMurdokResources.ToString();
-        currentResourcesHerpoText.text = "x" + m_currentHerpoResources.ToString();
+        currentResourcesMurdokText.text = "x" + currentMurdokResources.ToString();
+        currentResourcesHerpoText.text = "x" + currentHerpoResources.ToString();
     }
 
     //Private Methods
@@ -123,6 +123,6 @@ public class GUIController : MonoBehaviour
 
     private static GUIController instance = null;
     //Resources
-    private int m_currentMurdokResources = 0;
-    private int m_currentHerpoResources = 0;
+    private int currentMurdokResources = 0;
+    private int currentHerpoResources = 0;
 }

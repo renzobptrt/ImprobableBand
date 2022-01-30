@@ -141,6 +141,10 @@ public class GameController : MonoBehaviour
                     PlayerController.Instance.ResetController();
                     readyToRestart = true;
                     transitionPanel.interactable = false;
+                    foreach (Resource r in currentListResources)
+                    {
+                        r.ResetToGet();
+                    }
                 });
             });
         }
