@@ -3214,6 +3214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startCheckPointValue: 0
+  numberStages: 0
 --- !u!4 &422272561 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8626871078983993988, guid: a942e3ea04811a941b145746e12eee87, type: 3}
@@ -6556,6 +6557,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3465884537852502635, guid: 365494388fff56b418940a016d7a9e6c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3465884537852502645, guid: 365494388fff56b418940a016d7a9e6c, type: 3}
       propertyPath: numberCheckPoint
       value: 1
@@ -6564,7 +6569,9 @@ PrefabInstance:
       propertyPath: resourcesToCheck
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3465884537852502635, guid: 365494388fff56b418940a016d7a9e6c, type: 3}
+    - {fileID: 3465884537852502644, guid: 365494388fff56b418940a016d7a9e6c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 365494388fff56b418940a016d7a9e6c, type: 3}
 --- !u!1 &846318687
 GameObject:
@@ -14252,7 +14259,6 @@ MonoBehaviour:
   speed: 8
   jumpForce: 10
   gravity: -20
-  controller: {fileID: 0}
   lastUp: 0
 --- !u!4 &1822598246
 Transform:
@@ -16394,6 +16400,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4765807436557752960, guid: a37cad7b8e953584a9f8e602a2978d87, type: 3}
+      propertyPath: m_Name
+      value: HerpoAnimated
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a37cad7b8e953584a9f8e602a2978d87, type: 3}
 --- !u!1001 &6193500896175272872
@@ -16515,6 +16525,10 @@ PrefabInstance:
     - target: {fileID: 6281498982057341060, guid: 4c2928060a7b885439d06e3c619fdc50, type: 3}
       propertyPath: m_Name
       value: Murdok
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068426646423078234, guid: 4c2928060a7b885439d06e3c619fdc50, type: 3}
+      propertyPath: m_Name
+      value: MurdokAnimated
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c2928060a7b885439d06e3c619fdc50, type: 3}

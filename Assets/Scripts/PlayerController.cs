@@ -66,6 +66,9 @@ public class PlayerController : MonoBehaviour
         m_Murdok = GameObject.Find("Murdok").GetComponent<CharacterController>();
         m_Herpo = GameObject.Find("Herpo").GetComponent<CharacterController>();
         controller = m_Murdok;
+        an_Murdok = m_Murdok.transform.Find("MurdokAnimated").GetComponent<Animator>();
+        an_Herpo = m_Herpo.transform.Find("HerpoAnimated").GetComponent<Animator>();
+        animator = an_Murdok;
         lastController = controller;
         groundCheck = controller.transform.gameObject.transform.Find("GroundCheck").transform;
     }
@@ -127,26 +130,34 @@ public class PlayerController : MonoBehaviour
 
             if (hInput != 0)
             {
+                animator.SetBool("IsWalking", true);
                 Quaternion newRotation = Quaternion.LookRotation(new Vector3(0, 0, hInput));
                 controller.transform.rotation = newRotation;
+            }
+            else
+            {
+                animator.SetBool("IsWalking", false);
             }
         }
     }
 
     void ChangePlayer()
     {
+        animator.SetBool("IsWalking", false);
         switch (currentCharacter)
         {
             case Characters.Murdok:
                 {
                     currentCharacter = Characters.Herpo;
                     controller = m_Herpo;
+                    animator = an_Herpo;
                     break;
                 }
             case Characters.Herpo:
                 {
                     currentCharacter = Characters.Murdok;
                     controller = m_Murdok;
+                    animator = an_Murdok;
                     break;
                 }
         }
@@ -168,8 +179,11 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController m_Murdok;
     private CharacterController m_Herpo;
+    private Animator an_Murdok;
+    private Animator an_Herpo;
 
-    public CharacterController controller;
+    private CharacterController controller;
+    private Animator animator;
     private CharacterController lastController;
     private Transform groundCheck;
     private Vector3 startPositionMurdok;
