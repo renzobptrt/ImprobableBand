@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class SoundController : MonoBehaviour
 {
@@ -31,11 +32,23 @@ public class SoundController : MonoBehaviour
     //Public Methods
     public void PlayBackgroundMusic(string nameMusic)
     {
-        AudioClip currentBackground = Resources.Load<AudioClip>("Audio/"+nameMusic);
+        AudioClip currentBackground = Resources.Load<AudioClip>("Audio/Themes/"+nameMusic);
         if (currentBackground != null)
         {
-            backgroundMusicASource.clip = currentBackground;
-            backgroundMusicASource.Play();
+            if(backgroundMusicASource.clip == null)
+            {
+                backgroundMusicASource.clip = currentBackground;
+                backgroundMusicASource.Play();
+            }
+            else
+            {
+                backgroundMusicASource.DOFade(0, 0.2f).OnComplete(() =>
+                {
+                    backgroundMusicASource.clip = currentBackground;
+                    backgroundMusicASource.Play();
+                    backgroundMusicASource.DOFade(1, 0.2f);
+                });
+            }
         }
     }
 

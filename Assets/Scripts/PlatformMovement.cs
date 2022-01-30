@@ -45,9 +45,9 @@ public class PlatformMovement : MonoBehaviour
 
     void Movement()
     {
-        transform.DOMove(topPosition, timeToTop).OnComplete(() =>
+        transform.DOMove(topPosition, timeToTop).SetDelay(0.5f).OnComplete(() =>
         {
-            transform.DOMove(botPosition, timeToBot).OnComplete(() =>
+            transform.DOMove(botPosition, timeToBot).SetDelay(0.5f).OnComplete(() =>
             {
                 Movement();
             });

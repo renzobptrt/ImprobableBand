@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     public float jumpForceMurdok = 5;
     public float jumpForceHerpo = 10;
     public float gravity = -20;
+    public string nameThemeMurdok = string.Empty;
+    public string nameThemeHerpo = string.Empty;
 
     public static PlayerController Instance
     {
@@ -83,9 +85,10 @@ public class PlayerController : MonoBehaviour
         //ResetPositions();
         m_Murdok.transform.position = startPositionMurdok;
         m_Herpo.transform.position = startPositionHerpo;
-        jumpForce = jumpForceHerpo;
+        jumpForce = jumpForceMurdok;
 
         direction = Vector3.zero;
+        SoundController.Instance.PlayBackgroundMusic("Destruccion_Theme");
         CameraController.Instance.SetTarget(controller.transform.gameObject.transform);
     }
 
@@ -150,6 +153,7 @@ public class PlayerController : MonoBehaviour
 
     void ChangePlayer()
     {
+        string currentBackgroundMusic = string.Empty;
         animator.SetBool("IsWalking", false);
         switch (currentCharacter)
         {
@@ -159,6 +163,7 @@ public class PlayerController : MonoBehaviour
                     controller = m_Herpo;
                     animator = an_Herpo;
                     jumpForce = jumpForceHerpo;
+                    currentBackgroundMusic = nameThemeHerpo;
                     break;
                 }
             case Characters.Herpo:
@@ -167,6 +172,7 @@ public class PlayerController : MonoBehaviour
                     controller = m_Murdok;
                     animator = an_Murdok;
                     jumpForce = jumpForceMurdok;
+                    currentBackgroundMusic = nameThemeMurdok;
                     break;
                 }
         }
@@ -178,6 +184,7 @@ public class PlayerController : MonoBehaviour
         GUIController.Instance.ChangeGuiSpriteCharacter();
         //Audio
         SoundController.Instance.PlaySfxMusic("Change");
+        SoundController.Instance.PlayBackgroundMusic(currentBackgroundMusic);
     }
 
     private static PlayerController instance = null;
@@ -198,7 +205,6 @@ public class PlayerController : MonoBehaviour
     private Vector3 startPositionMurdok;
     private Vector3 startPositionHerpo;
 
-    public float lastUp;
     private float jumpForce = 10;
 
     private enum Characters

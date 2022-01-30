@@ -77,14 +77,13 @@ public class GameController : MonoBehaviour
     public void FinishGame()
     {
         readyToRestart = false;
-        CanvasGroup finishPanel = GUIController.Instance.transitionPanel;
+        CanvasGroup finishPanel = GUIController.Instance.finishPanel;
         finishPanel.interactable = true;
-        Button nextButton = finishPanel.transform.Find("Next").GetComponent<Button>();
-        nextButton.interactable = false;
+        GUIController.Instance.nextButton.interactable = false;
 
         finishPanel.DOFade(1, 2).OnComplete(() =>
         {
-            nextButton.interactable = true;
+            GUIController.Instance.nextButton.interactable = true;
         });
 
     }

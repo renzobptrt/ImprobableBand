@@ -13,6 +13,7 @@ public class GUIController : MonoBehaviour
     public Image currentCharacterImage;
     public TextMeshProUGUI currentResourcesMurdokText;
     public TextMeshProUGUI currentResourcesHerpoText;
+    public Button nextButton;
 
     [Header("Elements")]
     public Sprite s_Murdok;

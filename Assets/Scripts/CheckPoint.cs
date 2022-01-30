@@ -14,7 +14,7 @@ public class CheckPoint : MonoBehaviour
         {
             if (isLastCheckPoint)
             {
-
+                GameController.Instance.FinishGame();
             }
             else
             {
