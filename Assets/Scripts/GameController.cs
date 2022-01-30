@@ -85,6 +85,16 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        //Set Stages
+        Transform world = GameObject.Find("World").transform; 
+
+        foreach(Transform c in world)
+        {
+            if (c.gameObject.name.Contains("CheckBlock"))
+                numberStages++;
+        }
+
+        //SetCurrentBlock
         SetCurrentCurrentBlock(startCheckPointValue);
         SetCurrentResourcesToCheck(numberResourcesToCheck);
     }
@@ -150,4 +160,5 @@ public class GameController : MonoBehaviour
     private int currentResourcesToCheck = 0;
     private int numberResourcesToCheck = 3;
     private bool readyToRestart = true;
+    public int numberStages = 0;
 }
