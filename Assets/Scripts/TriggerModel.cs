@@ -30,8 +30,10 @@ public class TriggerModel : MonoBehaviour
     {
         if (characterToTrigger.Equals(TypeOfTrigger.Create))
             model.SetActive(false);
+        //color azul
         else
             model.SetActive(true);
+        //color rojo
     }
 
     private void OnTriggerEnter(Collider other)
